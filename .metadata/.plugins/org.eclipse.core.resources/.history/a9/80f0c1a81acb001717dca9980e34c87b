@@ -1,0 +1,19 @@
+
+public class InvertePalavraRecursivamente {
+
+	public static void main(String[] args) {
+		invertePalavra("abc")
+	}
+	
+	public static String invertePalavra(String palavra){
+		if(palavra.length() == 1){
+			System.out.print(palavra);
+			return palavra;
+		}else{
+			return invertePalavra(palavra.substring(1));
+		}
+	}
+	
+}
+
+

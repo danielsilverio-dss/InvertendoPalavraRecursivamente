@@ -1,0 +1,35 @@
+
+public class InvertePalavraRecursivamente {
+
+	public static void main(String[] args) {
+		//System.out.println("teste".substring(1, "teste".length()));
+		
+		System.out.println(invertePalavra("abcdefgh"));
+		System.out.println("\nacabou");
+		System.exit(0);
+	}
+	
+	public static String invertePalavraImprimindo(String palavra){		
+		if(palavra.length() == 1){
+			System.out.print(palavra);
+			return palavra;
+		}else{
+			int tamanho = palavra.length();
+			System.out.print( palavra.substring(tamanho - 1,tamanho) );
+			return invertePalavra(palavra.substring(0, tamanho - 1));
+		}
+	}
+	
+	public static String invertePalavra(String palavra){
+		if(palavra.length() == 1){
+			return palavra;
+		}else{
+			int tamanho = palavra.length();
+			String penultimaLetra = palavra.substring(1, tamanho - 1);
+			return invertePalavra(palavra.substring(1, tamanho));
+		}
+	}
+	
+}
+
+
